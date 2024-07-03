@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- A div element with an id of 'root' that will act as the container for the React components -->
+    <div id="root">
+        Not yet Rendered
+    </div>
+
+    <!-- Scripts to include React and ReactDOM libraries from a CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        // Creates a React element of type 'h1' with the text content "Namaste Everyone"
+        // element, props and children
+        const heading = React.createElement("h1", {id: "one", hihi: "two"}, "Namaste Everyone");
+        
+        // console.log(heading);
+        // Gets the 'root' element from the HTML document
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        console.log(root); //gives object
+        
+        // Renders the created React element inside the 'root' element
+        root.render(heading);
+    </script>
+</body>
+</html>
+
+<!-- 
+const heading = React.createElement(
+  "h1", 
+  { 
+    id: "one", 
+    className: "main-heading", 
+    style: { color: "blue", fontSize: "20px" }, 
+    title: "Greeting Heading", 
+    onClick: () => alert("Heading clicked!"),
+    "data-custom-attribute": "customValue",
+    hihi: "two"  // Custom prop (though not typically used in standard HTML)
+  }, 
+  "Namaste Everyone"
+);
+-->
